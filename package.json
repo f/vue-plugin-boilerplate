@@ -1,0 +1,74 @@
+{
+  "name": "vue-plugin",
+  "version": "0.0.1",
+  "description": "Vue Plugin Boilerplate",
+  "main": "dist/vue-plugin.js",
+  "types": "src/types/index.d.ts",
+  "files": [
+    "dist",
+    "src",
+    "nuxt"
+  ],
+  "scripts": {
+    "test": "exit 0;",
+    "storybook": "start-storybook",
+    "precommit": "lint-staged",
+    "build": "cross-env NODE_ENV=production webpack --config webpack.config.js",
+    "example:generic": "poi -s examples/generic/index.js"
+  },
+  "lint-staged": {
+    "src/**/*.js": [
+      "prettier --single-quote --write",
+      "git add"
+    ],
+    "examples/**/*.js": [
+      "prettier --single-quote --write",
+      "git add"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/f/vue-plugin-boilerplate.git"
+  },
+  "keywords": [
+    "vue",
+    "querystring",
+    "state",
+    "sync"
+  ],
+  "author": "Fatih Kadir Akin <fatihkadirakin@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/f/vue-plugin-boilerplate/issues"
+  },
+  "homepage": "https://github.com/f/vue-plugin-boilerplate#readme",
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-transform-runtime": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@storybook/addon-notes": "^5.1.10",
+    "@storybook/vue": "^5.1.10",
+    "babel-loader": "^8.0.6",
+    "babel-preset-vue": "^2.0.2",
+    "cross-env": "^5.2.0",
+    "eslint": "^6.1.0",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "husky": "^3.0.2",
+    "lint-staged": "^9.2.1",
+    "poi": "^12.7.1",
+    "prettier": "^1.18.2",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "vue": "^2.6.10",
+    "vue-html-loader": "^1.2.4",
+    "vue-loader": "^15.7.1",
+    "vue-style-loader": "^4.1.2",
+    "vue-template-compiler": "^2.6.10",
+    "vuex": "^3.1.1",
+    "webpack": "^4.39.1",
+    "webpack-cli": "^3.3.6"
+  },
+  "peerDependencies": {
+    "vue": "^2.6.10"
+  }
+}

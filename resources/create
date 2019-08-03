@@ -1,0 +1,4 @@
+#!/bin/bash
+
+git clone -q https://github.com/f/vue-plugin-boilerplate.git .
+./press

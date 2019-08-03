@@ -1,0 +1,30 @@
+#!/bin/bash
+
+read -p "Your plugin name? (with dahshes like vue-plugin-boilerplate): " pluginName
+read -p "Your plugin class name? (pascal case like VuePlugin): " className
+read -p "Your plugin options name? (like \"yourPlugin\" to be used as new Vue({ yourPlugin: {...} })): " optionsName
+read -p "Your plugin accesor name? (like \"helloWorld\" to be used as this.\$helloWorld): " accessorName
+read -p "Your plugin's GitHub address? (like \"f/vue-plugin-boilerplate\"): " ghAddress
+
+export replaces="s#f/vue-plugin-boilerplate#${ghAddress}#g; s#VuePlugin#${className}#g; s#vue-plugin#${pluginName}#g; s#myPlugin#${accessorName}#g; s#myPluginSettings#${optionsName}#g;"
+find {src,examples,nuxt,.storybook} -type f -name "*.js" -o -name "*.vue" -o -name "*.d.ts" | xargs sed -i.bak "$replaces"
+sed -i.bak "$replaces" package.json
+sed -i.bak "$replaces" README.tpl.md
+mv src/vue-plugin.js "src/${pluginName}.js"
+mv src/vue-plugin-component.vue "src/${pluginName}-component.vue"
+mv nuxt/vue-plugin-plugin.template.js.tpl "nuxt/${pluginName}-plugin.template.js.tpl"
+mv README.md README-BOILERPLATE.md.bak
+mv README.tpl.md README.md
+
+echo "Heya! Your ${pluginName} package is ready to develop!"
+echo "Pressing created some leftovers. You can run following commands to remove them now:"
+echo
+echo "  rm -rf ./.git"
+for f in $(find . -name "*.bak"); do
+  echo "  rm -f $f"
+done
+echo "  rm -rf ./resources"
+echo "  rm -f ./press"
+echo "  git init"
+echo "  yarn install"
+echo
