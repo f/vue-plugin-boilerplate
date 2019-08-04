@@ -20,11 +20,22 @@ This is a package for creating Vue plugins easily. You'll be able to create your
 
 ## Installation
 
+### Using **GitHub Template Repository**
+
+GitHub provides a feature to create repositories from another repositories. You can simply click the botton above to create a new project from this project structure.
+
+<img src="./resources/use-this-template.png" width="500" />
+
+It will ask you the repository name and it will be automatically cloned.
+
+### Using Shell
+
 ```bash
 git clone https://github.com/f/vue-plugin-boilerplate.git
 cd vue-plugin-bolierplate
-./press
 ```
+
+### `press` Command
 
 `press.sh` file is a script to rewrite some words in this package according to your changes. When you run it you'll be prompted as following:
 
