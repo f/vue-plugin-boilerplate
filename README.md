@@ -69,7 +69,7 @@ Do not forget to edit `package.json` details!
 
 ## Examples
 
-In `examples` file, you'll see a folder named `generic`. You can rename or duplicate it to show many features to your user.
+In `examples` file, you'll see a folder named `kitchensink`. You can rename or duplicate it to show many features to your user.
 
 ## Storybook
 
@@ -81,7 +81,7 @@ Your plugin includes a `.storybook` folder includes the **showcase** of your plu
 
 This boilerplate doesn't have an automated test yet. But this boilerplate provides a nice `examples` directory runs with **Poi**.
 
-You can make them run `yarn example:generic` to view your plugin running.
+You can make them run `yarn example:kitchensink` to view your plugin running.
 
 ### License
 

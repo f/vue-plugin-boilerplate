@@ -14,7 +14,7 @@
     "storybook": "start-storybook",
     "precommit": "lint-staged",
     "build": "cross-env NODE_ENV=production webpack --config webpack.config.js",
-    "example:generic": "poi -s examples/generic/index.js"
+    "example:kitchensink": "poi -s examples/kitchensink/index.js"
   },
   "lint-staged": {
     "src/**/*.js": [
