@@ -41,7 +41,9 @@ cd vue-plugin-bolierplate
 
 ### `press` Command
 
-`press.sh` file is a script to rewrite some words in this package according to your changes. When you run it you'll be prompted as following:
+For both **shell** and **GitHub Template** you should run the `press` command.
+
+`press` file is a script to rewrite some words in this package according to your changes. When you run it you'll be prompted as following:
 
 ```
 Your plugin name? (with dahshes like vue-plugin-boilerplate): vue-querystring-state

@@ -44,6 +44,7 @@
   "homepage": "https://github.com/f/vue-plugin-boilerplate#readme",
   "devDependencies": {
     "@babel/core": "^7.5.5",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
     "@babel/plugin-transform-runtime": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
     "@storybook/addon-notes": "^5.1.10",

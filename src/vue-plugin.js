@@ -1,15 +1,62 @@
-import { devMode } from './utils';
+import { devMode, registerVuexStore } from './utils';
+
+// Import your additional components here
 import VuePluginComponent from './vue-plugin-component.vue';
 
 export default class VuePlugin {
+  // HERE IS YOUR PLACE TO DEVELOP YOUR COMPONENT
+
   constructor(options = {}) {
     const defaults = {
       // This is your plugin's options. It will be accessible with this.options
       accessorName: '$myPlugin'
     };
     this.options = { ...defaults, ...options };
-    this.initialized = false;
   }
+
+  // Some instance methods that you can access from this.$myPlugin
+  world() {
+    return 'world';
+  }
+
+  static register = (Vue, options, store) => {
+    console.log('Here is the options of the component', options);
+    console.log('Here is the store of the app', store);
+    // You can use `this.options` property to access options.
+
+    // Delete this line if your plug-in doesn't provide any components
+    Vue.component('VuePlugin', VuePluginComponent);
+
+    // Vue.directive('your-custom-directive', customDirective);
+
+    // registerVuexStore(store, 'counterStore', {
+    //   namespaced: true,
+    //   state: { counter: 0 },
+    //   getters: {
+    //     counter: state => state.counter
+    //   },
+    //   actions: {
+    //     increment: ({ commit }) => commit('increment')
+    //   },
+    //   mutations: {
+    //     increment: state => state.counter++
+    //   }
+    // });
+  };
+
+  // Some lifecycle hooks to add on mixin
+  static mixin = () => ({
+    mounted() {
+      console.log('Hey! I am running on every mount, please remove me!');
+      console.log(this.$store);
+    }
+  });
+
+  ////////////////////////////////////
+  // YOU MAY NOT NEED TO EDIT BELOW //
+  ////////////////////////////////////
+
+  initialized = false;
 
   init(Vue, store) {
     if (devMode() && !install.installed) {
@@ -22,25 +69,8 @@ export default class VuePlugin {
       return;
     }
 
-    // HERE IS YOUR PLACE TO DEVELOP YOUR COMPONENT
-    // You can use `this.options` property to access options.
-
-    // Delete this line if your plug-in doesn't provide any components
-    Vue.component('VuePlugin', VuePluginComponent);
-
-    // Vue.directive('your-custom-directive', customDirective);
-
-    // if (store && !store._modules.get(['yourCustomStore'])) {
-    //   store.registerModule('yourCustomStore', customVuexStore);
-    // }
-
-    // DO NOT REMOVE FOLLOWING LINE!
+    VuePlugin.register(Vue, this.options, store);
     this.initialized = true;
-  }
-
-  // Some instance methods that you can access from this.$myPlugin
-  world() {
-    return 'world';
   }
 }
 
@@ -82,10 +112,7 @@ export function install(Vue) {
       }
     },
 
-    // You can add more hooks here, but you shouldn't remove `beforeCreate`
-    mounted() {
-      console.log('Hey! I am running on every mount, please remove me!');
-    }
+    ...VuePlugin.mixin()
   });
 
   install.installed = true;
