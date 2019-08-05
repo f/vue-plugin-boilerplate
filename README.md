@@ -31,7 +31,7 @@ It will ask you the repository name and it will be automatically cloned.
 ### Using Shell
 
 ```bash
-git clone https://github.com/f/vue-plugin-boilerplate.git
+git clone --depth 1 https://github.com/f/vue-plugin-boilerplate.git
 cd vue-plugin-bolierplate
 ```
 
