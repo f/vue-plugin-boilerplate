@@ -24,7 +24,11 @@ This is a package for creating Vue plugins easily. You'll be able to create your
 
 GitHub provides a feature to create repositories from another repositories. You can simply click the botton above to create a new project from this project structure.
 
-<img src="./resources/use-this-template.png" width="500" />
+Click following button to create a new project from this one or click the one above.
+
+<a href="https://github.com/f/vue-plugin-boilerplate/generate">
+  <img src="./resources/use-this-template-button.png" width="150" />
+</a>
 
 It will ask you the repository name and it will be automatically cloned.
 
