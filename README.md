@@ -14,9 +14,10 @@ This is a package for creating Vue plugins easily. You'll be able to create your
 - Create Vue **components**, **directives** on install.
 - Create or **inject Vuex stores**.
 - **Add runtime accessors** to Vue instances.
-- Configured Storybook integration
-- Nuxt plugin support
-- TypeScript type definitions
+- Configured Storybook integration.
+- **Nuxt** compatible.
+- **TypeScript** type definitions.
+- Including a **Kitcehsink**
 
 ## Installation
 
