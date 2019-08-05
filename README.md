@@ -8,7 +8,7 @@
 
 This is a package for creating Vue plugins easily. You'll be able to create your own open-sourced plugin easily with great features.
 
-<h3 align="center"><a href="https://github.com/f/vue-plugin-boilerplate/wiki/Step-by-Step-Guide">🚀 Open step by step guide to create a robust and well-designed Vue Plugin</a></h3>
+<h3 align="center"><a href="https://github.com/f/vue-plugin-boilerplate/wiki">🚀 Open step by step guide to create a robust and well-designed Vue Plugin</a></h3>
 
 ## Features
 - Create Vue **components**, **directives** on install.
@@ -65,7 +65,7 @@ Do not forget to edit `package.json` details!
 
 ## Plugin Development
 
-**[Please read Wiki to deep dive into plugin development.](https://github.com/f/vue-plugin-boilerplate/wiki/Step-by-Step-Guide)**
+**[Please read Wiki to deep dive into plugin development.](https://github.com/f/vue-plugin-boilerplate/wiki)**
 
 ## Examples
 
