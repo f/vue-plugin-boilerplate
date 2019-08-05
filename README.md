@@ -35,8 +35,8 @@ It will ask you the repository name and it will be automatically cloned.
 ### Using Shell
 
 ```bash
-git clone --depth 1 https://github.com/f/vue-plugin-boilerplate.git
-cd vue-plugin-bolierplate
+git clone --depth 1 https://github.com/f/vue-plugin-boilerplate.git vue-my-cool-plugin
+cd vue-my-cool-plugin
 ```
 
 ### `press` Command
@@ -46,10 +46,10 @@ For both **shell** and **GitHub Template** you should run the `press` command.
 `press` file is a script to rewrite some words in this package according to your changes. When you run it you'll be prompted as following:
 
 ```
-Your plugin name? (with dahshes like vue-plugin-boilerplate): vue-querystring-state
-Your plugin class name? (pascal case like VuePlugin): VueQuerystringState
-Your plugin accesor name? (like "helloWorld" to be used as this.$helloWorld): queryStringState
-Your plugin's GitHub address? (like "f/vue-plugin-boilerplate"): f/vue-querystring-state
+Your plugin name? (with dahshes like vue-plugin-boilerplate): vue-my-cool-plugin
+Your plugin class name? (pascal case like VuePlugin): VueMyCoolPlugin
+Your plugin accesor name? (like "helloWorld" to be used as this.$helloWorld): cool
+Your plugin's GitHub address? (like "f/vue-plugin-boilerplate"): f/vue-my-cool-plugin
 
 Heya! Your package vue-querystring-state is ready to develop!
 
