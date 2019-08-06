@@ -3,7 +3,7 @@
 read -p "Your plugin name? (with dahshes like vue-plugin-boilerplate): " pluginName
 read -p "Your plugin class name? (pascal case like VuePlugin): " className
 read -p "Your plugin options name? (like \"yourPlugin\" to be used as new Vue({ yourPlugin: {...} })): " optionsName
-read -p "Your plugin accesor name? (like \"helloWorld\" to be used as this.\$helloWorld): " accessorName
+read -p "Your plugin accessor name? (like \"helloWorld\" to be used as this.\$helloWorld): " accessorName
 read -p "Your plugin's GitHub address? (like \"f/vue-plugin-boilerplate\"): " ghAddress
 
 export replaces="s#f/vue-plugin-boilerplate#${ghAddress}#g; s#VuePlugin#${className}#g; s#vue-plugin#${pluginName}#g; s#myPlugin#${accessorName}#g; s#myPluginSettings#${optionsName}#g;"
