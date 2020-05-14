@@ -17,7 +17,7 @@ This is a package for creating Vue plugins easily. You'll be able to create your
 - Configured Storybook integration.
 - **Nuxt** compatible.
 - **TypeScript** type definitions.
-- Including a **Kitcehsink**
+- Including a **Kitchensink**
 
 ## Installation
 
